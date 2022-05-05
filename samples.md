@@ -3,14 +3,23 @@
 The following list gives an overview of the samples provided in subdirectories.
 Each sub directory essentially is an individual npm package arranged in an [all-in-one monorepo](all-in-one-monorepo) umbrella setup.
 
+![cap-samples](https://cap.cloud.sap/docs/03-Cookbook/91-Reuse-Extend/assets/cap-samples.drawio.svg)
+
+
+* **[@capire/bookshop](https://github.com/sap-samples/cloud-cap-samples/tree/main/bookshop)** provides a basic bookshop app and **reuse services** .
+* **[@capire/common](https://github.com/sap-samples/cloud-cap-samples/tree/main/common)** is a **prebuilt extension** and **business data** package for  *Countries* ,  *Currencies* , and  *Languages* .
+* **[@capire/reviews](https://github.com/sap-samples/cloud-cap-samples/tree/main/reviews)** provides an independent  **reuse service** .
+* **[@capire/orders](https://github.com/sap-samples/cloud-cap-samples/tree/main/orders)** provides another independent  **reuse service** .
+* **[@capire/bookstore](https://github.com/sap-samples/cloud-cap-samples/tree/main/bookstore)** combines all of the above into a **composite app**lication.
 
 ## [@capire/hello-world](hello)
 
 - A simplistic [Hello World](https://cap.cloud.sap/docs/get-started/hello-world) service using [CDS](https://cap.cloud.sap/docs/cds/) and [cds.services](https://cap.cloud.sap/docs/node.js/api#services-api).
 - [Typescript support](https://cap.cloud.sap/docs/get-started/using-typescript)
 
-
 ## [@capire/bookshop](bookshop)
+
+provides a basic bookshop app and **reuse services** .
 
 - [Getting Started](https://cap.cloud.sap/docs/get-started/in-a-nutshell) with CAP, briefly introducing:
 - [Project Setup](https://cap.cloud.sap/docs/get-started/) and [Layouts](https://cap.cloud.sap/docs/get-started/projects)
@@ -19,7 +28,6 @@ Each sub directory essentially is an individual npm package arranged in an [all-
 - [Generic Providers](https://cap.cloud.sap/docs/guides/generic-providers)
 - [Adding Custom Logic](https://cap.cloud.sap/docs/guides/service-impl)
 - [Using Databases](https://cap.cloud.sap/docs/guides/databases)
-
 
 ## [@capire/common](common)
 
@@ -30,13 +38,11 @@ Each sub directory essentially is an individual npm package arranged in an [all-
 - Using [Aspects](https://cap.cloud.sap/docs/cds/cdl#aspects)
 - Used in the [fiori app sample](#fiori)
 
-
 ## [@capire/orders](orders)
 
 - A standalone orders management service, demonstrating:
 - Using [Compositions](https://cap.cloud.sap/docs/cds/cdl#compositions) in [Domain Models](https://cap.cloud.sap/docs/guides/domain-models), along with
 - [Serving deeply nested documents](https://cap.cloud.sap/docs/guides/generic-providers#serving-structured-data)
-
 
 ## [@capire/reviews](reviews)
 
@@ -49,7 +55,6 @@ Each sub directory essentially is an individual npm package arranged in an [all-
 - Running service meshes
 - Late-cut Micro Services
 - As well as managed data, input validations, and authorization
-
 
 ## [@capire/bookstore](bookstore)
 
@@ -64,8 +69,6 @@ Each sub directory essentially is an individual npm package arranged in an [all-
 - [The Vue.js app](data-viewer/app/data) imported from `data-viewer` is served as well
 - [The Fiori app](orders/app) imported from `orders` is served as well
 - [OpenAPI export + Swagger UI](https://cap.cloud.sap/docs/advanced/openapi)
-
-
 
 ## [@capire/fiori](fiori)
 

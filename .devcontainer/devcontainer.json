@@ -1,8 +1,8 @@
 {
 	"name": "Node.js",
 	"build": {
-		"dockerfile": "Dockerfile",
-		"args": { "VARIANT": "16" }
+		"dockerfile": "Dockerfile"
+		/* "args": { "VARIANT": "16" } */
 	},
 	"settings": { 
 		"terminal.integrated.profiles.windows": {
@@ -26,7 +26,10 @@
 		"mechatroner.rainbow-csv",
 		"dbaeumer.vscode-eslint",
 		"esbenp.prettier-vscode",
+		"GrapeCity.gc-excelviewer",
+		"eamodio.gitlens"
 	],
 	"forwardPorts": [4004],
-	"remoteUser": "node"
+	// Container user VS Code should use when connecting
+	"remoteUser": "root"
 }

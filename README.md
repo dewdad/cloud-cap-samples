@@ -12,7 +12,6 @@ Find here a collection of samples for the [SAP Cloud Application Programming Mod
    ```sh
    npm i -g @sap/cds-dk
    ```
-
 2. _Optional:_ [Use Visual Studio Code](https://cap.cloud.sap/docs/get-started/tools#vscode)
 
 ### Download
@@ -26,10 +25,24 @@ cd samples
 
 ### Setup
 
-In the samples folder run:
+**1)** Get cap/samples and have them served through a local mock npm registry:
 
-```sh
+```bash
+git clone https://github.com/sap-samples/cloud-cap-samples samples
+cd samples
 npm install
+npm run registry
+```
+
+> Keep that running while running `npm` commands, referring to `@capire/...` packages.
+
+**2)** Start a sample project somewhere in a second terminal:
+
+```bash
+cds init sample
+cd sample
+npm i
+# ... run the upcoming commands in here
 ```
 
 ### Run
@@ -51,17 +64,19 @@ Run the provided tests with [_jest_](http://jestjs.io) or [_mocha_](http://mocha
 ```sh
 npx jest
 ```
-> While mocha is a bit smaller and faster, jest runs tests in parallel and isolation, which allows to run all tests.
 
+> While mocha is a bit smaller and faster, jest runs tests in parallel and isolation, which allows to run all tests.
 
 ### Serve `npm`
 
 We've included a simple npm registry mock, which allows you to do an `npm install @capire/<package>` locally. Use it as follows:
 
 1. Start the @capire registry:
+
 ```sh
 npm run registry
 ```
+
 > While running this will have `@capire:registry=http://localhost:4444` set with npmrc.
 
 2. Install one of the @capire packages wherever you like, for example:
@@ -70,16 +85,14 @@ npm run registry
 npm add @capire/common @capire/bookshop
 ```
 
-
 ## Code Tours
 
 Take one of the [guided tours](.tours) in VS Code through our CAP samples and learn which CAP features are showcased by the different parts of the repository. Just install the [CodeTour extension](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour) for VS Code. We'll add more code tours in the future. Stay tuned!
 
 ## Get Support
 
-Check out the documentation at [https://cap.cloud.sap](https://cap.cloud.sap). <br>
+Check out the documentation at [https://cap.cloud.sap](https://cap.cloud.sap). `<br>`
 In case you've a question, find a bug, or otherwise need support, use our [community](https://answers.sap.com/tags/9f13aee1-834c-4105-8e43-ee442775e5ce) to get more visibility.
-
 
 ## License
 
